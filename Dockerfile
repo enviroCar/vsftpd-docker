@@ -76,3 +76,6 @@ ENTRYPOINT [ "/usr/sbin/docker-entrypoint.sh" ]
 
 # default to start the FTP service
 CMD [ "vsftpd", "/etc/vsftpd/vsftpd.conf" ]
+
+HEALTHCHECK --interval=10s --timeout=5s --retries=5 CMD \
+  nc -z -v -w 5 localhost 21
