@@ -6,7 +6,7 @@ node {
   }
 
   stage('Build image') {
-    app = docker.build("ec-components/ftp")
+    app = docker.build("envirocar/ftp")
   }
 
   stage('Push image') {
