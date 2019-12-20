@@ -56,9 +56,6 @@ ENV CERT_FILE=/etc/vsftpd/ssl/cert.pem \
 
 COPY files /
 
-# data of the ftp daemon
-VOLUME /var/lib/ftp 
-
 # generated certificates
 VOLUME /etc/vsftpd/ssl
 
